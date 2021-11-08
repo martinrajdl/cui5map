@@ -1,4 +1,3 @@
-from numpy import NAN
 import pandas
 import json
 
@@ -55,3 +54,4 @@ outfile_dont_haves = open("dont_haves.json", "w")
 
 outfile.write(json.dumps(mappings, indent=4))
 outfile_dont_haves.write(json.dumps(dont_haves, indent=4))
+

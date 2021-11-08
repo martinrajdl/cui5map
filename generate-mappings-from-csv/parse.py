@@ -30,18 +30,18 @@ for filename in filenames:
                 file.comments[i]
             )
 
-        def assign(from_t, to_ts, c):
-            if (len(to_ts) == 1 and to_ts[0] == ""):
-                to_ts = []
+        def assign(from_token, to_tokens, c):
+            if (len(to_tokens) == 1 and to_tokens[0] == ""):
+                to_tokens = []
 
-            mappings[from_t] = {
-                "to": to_ts
+            mappings[from_token] = {
+                "to": to_tokens
             }
             if (len(c)):
-                mappings[from_t]["comments"] = c
+                mappings[from_token]["comments"] = c
 
-            if (not len(to_ts)):
-                dont_haves.append(from_t)
+            if (not len(to_tokens)):
+                dont_haves.append(from_token)
 
         tokens = prep(file.cui4_token, file.cui5_token, i)
         tokens_rgba = prep(file.cui4_token_rgba, file.cui5_token_rgba, i)
